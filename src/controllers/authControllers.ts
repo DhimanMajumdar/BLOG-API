@@ -25,7 +25,7 @@ export async function register(req:Request,res:Response){
 
         const passwordHash=await bcrypt.hash(password,10);
 
-        const user=await User.create({name,email,passwordHash});
+        const user=await User.create({name,email,password:passwordHash});
 
         const token=jwt.sign({userId:String(user._id)}, process.env["JWT_SECRET"] as string,{
             expiresIn:"7d"
