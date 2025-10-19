@@ -1,7 +1,8 @@
+
 import type { Request,Response } from "express";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
-import User from "../models/Blog";
+import User from "../models/Blog.ts";
 
 
 // register a new user

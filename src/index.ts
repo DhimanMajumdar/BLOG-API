@@ -1,3 +1,4 @@
+
 // create our first http server
 // import { createServer } from "http";
 
@@ -20,9 +21,10 @@ import express from "express";
 import dotenv from "dotenv"
 import swaggerUi from "swagger-ui-express"
 
-import authRoutes from "./routes/authRoutes"
-import { connectDB } from "./config/database";
-import {swaggerSpec} from "./config/swagger";
+import authRoutes from "./routes/authRoutes.ts";
+import { connectDB } from "./config/database.ts";
+import { swaggerSpec } from "./config/swagger.ts";
+
 
 dotenv.config();
 
